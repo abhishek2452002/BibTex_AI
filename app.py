@@ -244,10 +244,10 @@ def display_latex_content(latex_content, tab_title="Generated LaTeX"):
 
 def check_api_key():
     """Check if API key is provided in secrets or needs to be entered by user."""
-    if 'MISTRAL_API_KEY' in os.environ:
-        return os.environ['MISTRAL_API_KEY']
+    if 'GROQ' in os.environ:
+        return os.environ['GROQ']
     else:
-        return st.sidebar.text_input("Enter Mistral API Key", type="password")
+        return st.sidebar.text_input("Enter GROQ API Key", type="password")
 
 
 def main():
@@ -580,7 +580,7 @@ def main():
     st.markdown("""
     <div style="text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #ddd;font-size:0.8rem;color:#666;">
         <p>BibTeX AI | Research Document Generator | &copy; 2025</p>
-        <p>Powered by Mistral AI and Gemini</p>
+        <p>Powered by GROQ and Gemini</p>
     </div>
     """, unsafe_allow_html=True)
 
